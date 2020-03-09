@@ -8,8 +8,7 @@ galaxy_info:
    - name: Ubuntu
      versions:
      - bionic
-  galaxy_tags: 
+  galaxy_tags:
     - vsftp
     - ftp
-    - ftp_server
 dependencies: []
