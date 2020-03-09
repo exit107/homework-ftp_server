@@ -4,6 +4,20 @@
     name: vsftpd
     state: present
 
+- name: Enable IPv4 listener (independent of inetd)
+  replace:
+    path: /etc/vsftpd.conf
+    regexp: 'listen=NO'
+    replace: 'listen=YES'
+  notify: 'Restart VSFTPd'
+
+- name: Disable IPv6 listener
+  replace:
+    path: /etc/vsftpd.conf
+    regexp: 'listen_ipv6=YES'
+    replace: 'listen_ipv6=NO'
+  notify: 'Restart VSFTPd'
+      
 - name: Enable and start VSFTPd
   service:
     name: vsftpd
