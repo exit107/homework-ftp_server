@@ -1,7 +1,8 @@
 ---
 - name: Install VSFTPd ftp server
-  package:
+  apt:
     name: vsftpd
+    update_cache: true
     state: present
 
 - name: Enable IPv4 listener (independent of inetd)
@@ -17,9 +18,11 @@
     regexp: 'listen_ipv6=YES'
     replace: 'listen_ipv6=NO'
   notify: 'Restart VSFTPd'
-      
+
 - name: Enable and start VSFTPd
   service:
     name: vsftpd
     enabled: yes
     state: started
+      # Problems with PID checking lead to false positives on startup errors: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=754762;msg=9
+  ignore_errors: yes
