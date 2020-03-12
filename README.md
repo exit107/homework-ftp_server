@@ -25,4 +25,4 @@ Example Playbook
       roles:
          - { role: homework-ftp_server }
 
-See [CONTRIBUTING.md](https://github.com/exit107/homework-ftp_server/CONTRIBUTING.md) for guidance on how to develop and test this role.
+See [CONTRIBUTING.md](https://github.com/exit107/homework-ftp_server/blob/master/CONTRIBUTING.md) for guidance on how to develop and test this role.
