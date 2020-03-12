@@ -1,7 +1,7 @@
 homework-ftp_server
 =========
 
-This role installs vsftpd.
+This role installs [vsftpd](https://security.appspot.com/vsftpd.html).
 
 Requirements
 ------------
