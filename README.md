@@ -1,3 +1,5 @@
+![Molecule](https://github.com/exit107/homework-ftp_server/workflows/Molecule/badge.svg)
+
 homework-ftp_server
 =========
 
